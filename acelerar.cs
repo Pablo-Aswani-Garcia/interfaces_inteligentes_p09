@@ -7,7 +7,7 @@ public class acelerar : MonoBehaviour {
 
   private IEnumerator Start() {
     foreach (InputDevice device in InputSystem.devices) {
-      if (device.name == "Accelerometer") {
+      if (device is Accelerometer) {
         _accelerometer = (Accelerometer)device;
         InputSystem.EnableDevice(_accelerometer);
         break;
